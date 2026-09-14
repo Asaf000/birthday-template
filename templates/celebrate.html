@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    >
+
+    <title>Happy Birthday Ashraf 🎂</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/celebrate.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+<main class="celebrate-page">
+
+
+    <!-- =====================================================
+         BACKGROUND STARS
+    ====================================================== -->
+
+    <div class="background-stars">
+
+        <span>✦</span>
+        <span>✧</span>
+        <span>✦</span>
+        <span>✧</span>
+        <span>✦</span>
+        <span>✧</span>
+        <span>✦</span>
+        <span>✧</span>
+
+    </div>
+
+
+    <!-- =====================================================
+         FIREWORKS
+    ====================================================== -->
+
+    <div
+        class="fireworks"
+        id="fireworks"
+    ></div>
+
+
+    <!-- =====================================================
+         CONFETTI
+    ====================================================== -->
+
+    <div
+        class="confetti-container"
+        id="confettiContainer"
+    ></div>
+
+
+    <!-- =====================================================
+         BALLOONS
+    ====================================================== -->
+
+    <div
+        class="balloons"
+        id="balloons"
+    >
+
+        <div class="balloon balloon-pink">
+            <div class="balloon-string"></div>
+        </div>
+
+        <div class="balloon balloon-blue">
+            <div class="balloon-string"></div>
+        </div>
+
+        <div class="balloon balloon-purple">
+            <div class="balloon-string"></div>
+        </div>
+
+        <div class="balloon balloon-yellow">
+            <div class="balloon-string"></div>
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         FLOATING HEARTS
+    ====================================================== -->
+
+    <div
+        class="hearts"
+        id="hearts"
+    ></div>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <div class="celebrate-content">
+
+
+        <!-- =================================================
+             HEADING
+        ================================================== -->
+
+        <div class="celebrate-heading">
+
+            <p>LOOK WHAT YOU MADE</p>
+
+            <h1>Your Cake 🎂</h1>
+
+        </div>
+
+
+        <!-- =================================================
+             CAKE SCENE
+        ================================================== -->
+
+        <div class="cake-scene">
+
+            <div class="cake-glow"></div>
+
+
+            <!-- CANDLES -->
+
+            <div class="candles">
+
+
+                <!-- LEFT CANDLE -->
+
+                <div class="candle candle-left">
+
+                    <div class="flame"></div>
+
+                    <div class="smoke"></div>
+
+                    <div class="candle-body"></div>
+
+                </div>
+
+
+                <!-- CENTER CANDLE -->
+
+                <div class="candle candle-center">
+
+                    <div class="flame"></div>
+
+                    <div class="smoke"></div>
+
+                    <div class="candle-body"></div>
+
+                </div>
+
+
+                <!-- RIGHT CANDLE -->
+
+                <div class="candle candle-right">
+
+                    <div class="flame"></div>
+
+                    <div class="smoke"></div>
+
+                    <div class="candle-body"></div>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- =================================================
+                 CAKE
+            ================================================== -->
+
+            <div class="cake">
+
+
+                <!-- TOP LAYER -->
+
+                <div
+                    class="cake-layer layer-3 {{ cake_data.crust3 }}"
+                >
+
+                    <div class="frosting frosting-3"></div>
+
+                    <div class="decoration dots-3">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MIDDLE LAYER -->
+
+                <div
+                    class="cake-layer layer-2 {{ cake_data.crust2 }}"
+                >
+
+                    <div class="frosting frosting-2"></div>
+
+                    <div class="decoration dots-2">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BOTTOM LAYER -->
+
+                <div
+                    class="cake-layer layer-1 {{ cake_data.crust1 }}"
+                >
+
+                    <div class="frosting frosting-1"></div>
+
+                    <div class="decoration dots-1">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PLATE -->
+
+                <div class="cake-plate"></div>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             SLIDER
+        ================================================== -->
+
+        <div
+            class="slide-container"
+            id="slideContainer"
+        >
+
+            <div class="slide-text">
+                Slide to continue
+            </div>
+
+
+            <div
+                class="slide-track"
+                id="slideTrack"
+            >
+
+                <div
+                    class="slide-fill"
+                    id="slideFill"
+                ></div>
+
+
+                <div
+                    class="slide-button"
+                    id="slideButton"
+                >
+                    →
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             FINAL CELEBRATION SECTION
+        ================================================== -->
+
+        <div
+            class="celebration-final"
+            id="celebrationFinal"
+        >
+
+
+            <!-- =================================================
+                 BIRTHDAY MESSAGE
+            ================================================== -->
+
+            <div
+                class="birthday-message"
+                id="birthdayMessage"
+            >
+
+                <div class="birthday-small-text">
+                    TODAY IS YOUR DAY
+                </div>
+
+
+                <h2>
+                    HAPPY BIRTHDAY
+                </h2>
+
+
+                <h3>
+                    ASHRAF ❤️
+                </h3>
+
+
+                <div class="birthday-sparkles">
+                    ✦ ✧ ✦
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PARTY INVITATION
+            ================================================== -->
+
+            <div
+                class="party-invitation"
+                id="partyInvitation"
+            >
+
+                <div class="party-question">
+                    Wanna give your party?
+                </div>
+
+
+                <button
+                    class="birthday-party-btn"
+                    id="birthdayPartyBtn"
+                    type="button"
+                >
+
+                    <span class="party-btn-shine"></span>
+
+                    <span class="party-btn-icon">
+                        🎉
+                    </span>
+
+                    <span class="party-btn-text">
+                        Birthday Party
+                    </span>
+
+                    <span class="party-btn-arrow">
+                        →
+                    </span>
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</main>
+
+
+<!-- =====================================================
+     CAKE DATA
+====================================================== -->
+
+<script>
+
+    const cakeColors = {
+
+        crust1: "{{ cake_data.crust1 }}",
+
+        crust2: "{{ cake_data.crust2 }}",
+
+        crust3: "{{ cake_data.crust3 }}"
+
+    };
+
+
+    console.log(
+        "Selected cake:",
+        cakeColors
+    );
+
+</script>
+
+
+<!-- =====================================================
+     CELEBRATION AUDIO
+====================================================== -->
+
+<audio
+    id="clapSound"
+    preload="auto"
+>
+
+    <source
+        src="{{ url_for('static', filename='audio/clap.mp3') }}"
+        type="audio/mpeg"
+    >
+
+</audio>
+
+
+<audio
+    id="birthdayMusic"
+    preload="auto"
+>
+
+    <source
+        src="{{ url_for('static', filename='audio/happy-birthday.mp3') }}"
+        type="audio/mpeg"
+    >
+
+</audio>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script
+    src="{{ url_for('static', filename='js/celebrate.js') }}"
+></script>
+
+
+</body>
+
+</html>

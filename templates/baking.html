@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Preparing Your Cake 🎂</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/baking.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+    <main class="baking-page">
+
+        <div class="baking-content">
+
+            <p class="baking-small-text">
+                Just a little patience...
+            </p>
+
+            <h1>
+                Your cake is<br>
+                being prepared 🎂
+            </h1>
+
+            <div
+                class="countdown"
+                id="countdown"
+            >
+                5
+            </div>
+
+            <p class="seconds-text">
+                seconds remaining
+            </p>
+
+            <div
+                class="ready-message"
+                id="readyMessage"
+            >
+                Your cake is ready! 🎂
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script
+        src="{{ url_for('static', filename='js/baking.js') }}"
+    ></script>
+
+</body>
+
+</html>

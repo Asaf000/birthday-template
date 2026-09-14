@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    >
+
+    <title>Birthday Party 🎉</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/party.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         PARTY PAGE
+    ====================================================== -->
+
+    <main class="party-page">
+
+
+        <!-- =================================================
+             BACKGROUND DECORATION
+        ================================================== -->
+
+        <div class="party-stars">
+
+            <span>✦</span>
+            <span>✧</span>
+            <span>✦</span>
+            <span>✧</span>
+            <span>✦</span>
+            <span>✧</span>
+
+        </div>
+
+
+        <!-- FLOATING BALLOONS -->
+
+        <div class="party-balloons">
+
+            <div class="party-balloon party-balloon-pink"></div>
+
+            <div class="party-balloon party-balloon-blue"></div>
+
+            <div class="party-balloon party-balloon-purple"></div>
+
+            <div class="party-balloon party-balloon-yellow"></div>
+
+        </div>
+
+
+        <!-- =================================================
+             MAIN CONTENT
+        ================================================== -->
+
+        <section class="party-content">
+
+
+            <!-- HEADER -->
+
+            <div class="party-header">
+
+                <div class="party-mini">
+                    ONE LAST THING...
+                </div>
+
+                <h1>
+                    Wanna Give<br>
+                    Your Party? 🎉
+                </h1>
+
+                <p class="party-subtitle">
+                    You already made the cake...
+                    <br>
+                    now you know what comes next 😌
+                </p>
+
+            </div>
+
+
+            <!-- =================================================
+                 QR CARD
+            ================================================== -->
+
+            <div class="qr-card" id="qrCard">
+
+
+                <div class="qr-card-top">
+
+                    <span class="qr-icon">
+                        💰
+                    </span>
+
+                    <div>
+
+                        <div class="qr-title">
+                            Birthday Party Fund
+                        </div>
+
+                        <div class="qr-small">
+                            Scan & make the birthday better
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- QR -->
+
+                <div class="qr-wrapper">
+
+                    <div class="qr-glow"></div>
+
+                    <img
+                        src="{{ url_for('static', filename='images/paytm-qr.png') }}"
+                        alt="Paytm QR Code"
+                        class="paytm-qr"
+                    >
+
+                </div>
+
+
+                <div class="qr-instruction">
+
+                    Scan this QR code with Paytm
+
+                </div>
+
+
+                <div class="qr-thanks">
+
+                    ❤️ Thank you for the party
+
+                </div>
+
+
+            </div>
+
+
+            <!-- =================================================
+                 QUOTE
+            ================================================== -->
+
+            <div class="party-quote">
+
+                <div class="quote-mark">
+                    “
+                </div>
+
+                <p>
+                    A birthday is incomplete without
+                    cake, memories, laughter...
+                    and someone paying for the party.
+                </p>
+
+                <div class="quote-author">
+                    — The Birthday Committee 😌
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 FINAL MESSAGE
+            ================================================== -->
+
+            <div class="final-message">
+
+                <span>🎂</span>
+
+                <p>
+                    No pressure...
+                    <strong>but you know what to do.</strong>
+                </p>
+
+                <span>🎉</span>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =================================================
+             ESCAPING BUTTON
+        ================================================== -->
+
+        <button
+            type="button"
+            id="leaveButton"
+            class="leave-button"
+        >
+
+            <span class="leave-icon">
+                🚪
+            </span>
+
+            <span>
+                Leave
+            </span>
+
+        </button>
+
+
+        <!-- =================================================
+             BOTTOM MESSAGE
+        ================================================== -->
+
+        <div class="bottom-hint">
+
+            Nice try 😏
+
+        </div>
+
+
+    </main>
+
+
+    <script
+        src="{{ url_for('static', filename='js/party.js') }}"
+    ></script>
+
+
+<!-- PARTY MUSIC -->
+<audio id="partyMusic" preload="auto" loop>
+    <source 
+        src="{{ url_for('static', filename='audio/party.mp3') }}" 
+        type="audio/mpeg"
+    >
+</audio>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const partyMusic =
+            document.getElementById("partyMusic");
+
+        if (partyMusic) {
+
+            partyMusic.volume = 0.7;
+
+            const playMusic = function () {
+
+                partyMusic.play().catch(function (error) {
+
+                    console.log(
+                        "Party music could not autoplay:",
+                        error
+                    );
+
+                });
+
+            };
+
+            playMusic();
+
+        }
+
+    });
+</script>
+
+</body>
+
+</html>

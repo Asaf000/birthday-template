@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Birthday ❤️</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HOME PAGE
+         ========================================= -->
+
+    <main class="home-page">
+
+
+        <!-- =====================================
+             BACKGROUND DECORATIONS
+             ===================================== -->
+
+        <div class="home-decoration home-star star-1">✦</div>
+        <div class="home-decoration home-star star-2">✧</div>
+        <div class="home-decoration home-star star-3">✦</div>
+        <div class="home-decoration home-star star-4">✧</div>
+
+        <div class="home-decoration home-heart heart-1">♡</div>
+        <div class="home-decoration home-heart heart-2">♡</div>
+
+        <div class="soft-glow glow-1"></div>
+        <div class="soft-glow glow-2"></div>
+
+
+        <!-- =====================================
+             TOP DATE
+             ===================================== -->
+
+        <div class="birthday-date">
+
+            <div class="date-number">
+                06
+            </div>
+
+            <div class="date-details">
+                <span>SEPTEMBER</span>
+                <small>A SPECIAL DAY</small>
+            </div>
+
+        </div>
+
+
+        <!-- =====================================
+             MAIN INTRO
+             ===================================== -->
+
+        <div class="home-content">
+
+
+            <div class="home-eyebrow">
+                ✦ IT'S A LITTLE CELEBRATION ✦
+            </div>
+
+
+            <h1 class="home-title">
+                A Special Day
+            </h1>
+
+
+            <p class="home-subtitle">
+                Something sweet is waiting for you...
+            </p>
+
+
+            <!-- =================================
+                 CLICK BUTTON
+                 ================================= -->
+
+            <button
+                class="click-button"
+                id="clickHereBtn"
+                type="button"
+            >
+                CLICK HERE
+            </button>
+
+
+            <!-- =================================
+                 QUOTE
+                 ================================= -->
+
+            <div class="home-quote">
+
+                <span class="quote-mark">“</span>
+
+                <p>
+                    Some days are just dates on a calendar.
+                    And then there are days worth celebrating.
+                </p>
+
+                <span class="quote-author">
+                    — A little birthday thought
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- =====================================
+             BOTTOM MESSAGE
+             ===================================== -->
+
+        <div class="home-footer">
+
+            <span class="footer-cake">🎂</span>
+
+            <span>
+                Made with
+                <span class="footer-heart">♥</span>
+                for Ashraf
+            </span>
+
+            <span class="footer-cake">🎂</span>
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         CAKE MODAL
+         ========================================= -->
+
+    <div
+        class="cake-modal-overlay"
+        id="cakeModal"
+    >
+
+        <div class="cake-modal">
+
+
+            <!-- CLOSE BUTTON -->
+
+            <button
+                class="modal-close"
+                id="modalClose"
+                type="button"
+            >
+                ×
+            </button>
+
+
+            <!-- TITLE -->
+
+            <div class="cake-modal-header">
+
+                <h2>
+                    Let's Build Your Cake
+                </h2>
+
+                <p>
+                    Choose the colors for your cake
+                </p>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 CRUST 1
+                 ===================================== -->
+
+            <div class="crust-section">
+
+                <div class="crust-title">
+                    Crust 1
+                </div>
+
+                <div class="color-label">
+                    Choose your color
+                </div>
+
+                <div class="color-options">
+
+                    <button
+                        class="color-option pink"
+                        data-crust="crust1"
+                        data-color="pink"
+                        type="button"
+                        aria-label="Pink"
+                    ></button>
+
+                    <button
+                        class="color-option blue"
+                        data-crust="crust1"
+                        data-color="blue"
+                        type="button"
+                        aria-label="Blue"
+                    ></button>
+
+                    <button
+                        class="color-option purple"
+                        data-crust="crust1"
+                        data-color="purple"
+                        type="button"
+                        aria-label="Purple"
+                    ></button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 CRUST 2
+                 ===================================== -->
+
+            <div class="crust-section">
+
+                <div class="crust-title">
+                    Crust 2
+                </div>
+
+                <div class="color-label">
+                    Choose your color
+                </div>
+
+                <div class="color-options">
+
+                    <button
+                        class="color-option pink"
+                        data-crust="crust2"
+                        data-color="pink"
+                        type="button"
+                        aria-label="Pink"
+                    ></button>
+
+                    <button
+                        class="color-option blue"
+                        data-crust="crust2"
+                        data-color="blue"
+                        type="button"
+                        aria-label="Blue"
+                    ></button>
+
+                    <button
+                        class="color-option purple"
+                        data-crust="crust2"
+                        data-color="purple"
+                        type="button"
+                        aria-label="Purple"
+                    ></button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 CRUST 3
+                 ===================================== -->
+
+            <div class="crust-section">
+
+                <div class="crust-title">
+                    Crust 3
+                </div>
+
+                <div class="color-label">
+                    Choose your color
+                </div>
+
+                <div class="color-options">
+
+                    <button
+                        class="color-option pink"
+                        data-crust="crust3"
+                        data-color="pink"
+                        type="button"
+                        aria-label="Pink"
+                    ></button>
+
+                    <button
+                        class="color-option blue"
+                        data-crust="crust3"
+                        data-color="blue"
+                        type="button"
+                        aria-label="Blue"
+                    ></button>
+
+                    <button
+                        class="color-option purple"
+                        data-crust="crust3"
+                        data-color="purple"
+                        type="button"
+                        aria-label="Purple"
+                    ></button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 START BAKING
+                 ===================================== -->
+
+            <button
+                class="start-baking-button"
+                id="startBakingBtn"
+                type="button"
+                disabled
+            >
+                START BAKING
+            </button>
+
+
+        </div>
+
+    </div>
+
+
+
+    <script
+        src="{{ url_for('static', filename='js/script.js') }}"
+    ></script>
+
+
+</body>
+
+</html>
