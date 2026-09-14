@@ -1,0 +1,1448 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+
+    width: 100%;
+    min-height: 100%;
+
+}
+
+
+body {
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    overflow:
+        hidden;
+
+}
+
+
+/* =========================================================
+   MAIN PAGE
+========================================================= */
+
+.party-page {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    min-height:
+        100vh;
+
+    overflow:
+        hidden;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    background-image:
+        url("/static/images/homebc.png");
+
+    background-size:
+        cover;
+
+    background-position:
+        center;
+
+}
+
+
+/* =========================================================
+   MOBILE BACKGROUND
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .party-page {
+
+        background-image:
+            url("/static/images/homebc-mobile.png");
+
+        background-position:
+            center;
+
+    }
+
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.party-content {
+
+    position:
+        relative;
+
+    z-index:
+        10;
+
+    width:
+        min(92%, 440px);
+
+    max-height:
+        96vh;
+
+    overflow:
+        hidden;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    text-align:
+        center;
+
+    animation:
+        pageAppear
+        .9s
+        ease
+        forwards;
+
+}
+
+
+@keyframes pageAppear {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(25px)
+            scale(.96);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.party-header {
+
+    margin-bottom:
+        14px;
+
+}
+
+
+.party-mini {
+
+    color:
+        #80616d;
+
+    font-size:
+        10px;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        4px;
+
+    margin-bottom:
+        5px;
+
+}
+
+
+.party-header h1 {
+
+    color:
+        #49343e;
+
+    font-size:
+        clamp(
+            29px,
+            8vw,
+            43px
+        );
+
+    line-height:
+        1;
+
+    font-weight:
+        950;
+
+    letter-spacing:
+        -1.5px;
+
+    text-shadow:
+
+        0 3px 0
+        rgba(255,255,255,.8),
+
+        0 8px 18px
+        rgba(80,40,60,.16);
+
+}
+
+
+.party-subtitle {
+
+    margin-top:
+        8px;
+
+    color:
+        #745763;
+
+    font-size:
+        13px;
+
+    line-height:
+        1.45;
+
+    font-weight:
+        650;
+
+}
+
+
+/* =========================================================
+   QR CARD
+========================================================= */
+
+.qr-card {
+
+    position:
+        relative;
+
+    width:
+        min(100%, 315px);
+
+    padding:
+        15px 15px 17px;
+
+    border-radius:
+        25px;
+
+    background:
+        rgba(255,255,255,.88);
+
+    border:
+        1px solid
+        rgba(255,255,255,.95);
+
+    box-shadow:
+
+        0 20px 45px
+        rgba(90,45,70,.20),
+
+        inset 0 1px 0
+        rgba(255,255,255,.95);
+
+    backdrop-filter:
+        blur(10px);
+
+    -webkit-backdrop-filter:
+        blur(10px);
+
+}
+
+
+/* =========================================================
+   QR CARD TOP
+========================================================= */
+
+.qr-card-top {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        9px;
+
+    margin-bottom:
+        11px;
+
+}
+
+
+.qr-icon {
+
+    width:
+        37px;
+
+    height:
+        37px;
+
+    border-radius:
+        12px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fff0ad,
+            #e4ae2d
+        );
+
+    box-shadow:
+
+        0 4px 8px
+        rgba(160,100,0,.20);
+
+}
+
+
+.qr-title {
+
+    color:
+        #49343e;
+
+    font-size:
+        16px;
+
+    font-weight:
+        900;
+
+    text-align:
+        left;
+
+}
+
+
+.qr-small {
+
+    color:
+        #80616d;
+
+    font-size:
+        10px;
+
+    margin-top:
+        2px;
+
+    text-align:
+        left;
+
+}
+
+
+/* =========================================================
+   QR WRAPPER
+========================================================= */
+
+.qr-wrapper {
+
+    position:
+        relative;
+
+    width:
+        205px;
+
+    height:
+        205px;
+
+    margin:
+        0 auto;
+
+    padding:
+        10px;
+
+    border-radius:
+        18px;
+
+    background:
+        #ffffff;
+
+    box-shadow:
+
+        0 8px 20px
+        rgba(70,40,55,.12),
+
+        inset 0 0 0 1px
+        rgba(80,50,60,.06);
+
+}
+
+
+/* =========================================================
+   QR GLOW
+========================================================= */
+
+.qr-glow {
+
+    position:
+        absolute;
+
+    inset:
+        -12px;
+
+    border-radius:
+        25px;
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(255,190,60,.24),
+            transparent 70%
+        );
+
+    filter:
+        blur(12px);
+
+    z-index:
+        -1;
+
+    animation:
+        qrGlow
+        2.5s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes qrGlow {
+
+    0%,
+    100% {
+
+        opacity:
+            .5;
+
+        transform:
+            scale(.95);
+
+    }
+
+    50% {
+
+        opacity:
+            1;
+
+        transform:
+            scale(1.05);
+
+    }
+
+}
+
+
+/* =========================================================
+   QR IMAGE
+========================================================= */
+
+.paytm-qr {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    display:
+        block;
+
+    object-fit:
+        contain;
+
+    border-radius:
+        8px;
+
+}
+
+
+/* =========================================================
+   QR TEXT
+========================================================= */
+
+.qr-instruction {
+
+    margin-top:
+        10px;
+
+    color:
+        #5d4650;
+
+    font-size:
+        12px;
+
+    font-weight:
+        750;
+
+}
+
+
+.qr-thanks {
+
+    margin-top:
+        5px;
+
+    color:
+        #e48b20;
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+
+}
+
+
+/* =========================================================
+   QUOTE
+========================================================= */
+
+.party-quote {
+
+    position:
+        relative;
+
+    width:
+        min(100%, 360px);
+
+    margin-top:
+        13px;
+
+    padding:
+        9px 18px 8px;
+
+}
+
+
+.quote-mark {
+
+    position:
+        absolute;
+
+    left:
+        3px;
+
+    top:
+        -7px;
+
+    color:
+        rgba(232,79,141,.28);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        43px;
+
+    line-height:
+        1;
+
+}
+
+
+.party-quote p {
+
+    color:
+        #644b55;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        13px;
+
+    line-height:
+        1.45;
+
+    font-style:
+        italic;
+
+}
+
+
+.quote-author {
+
+    margin-top:
+        5px;
+
+    color:
+        #8a6c76;
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+
+}
+
+
+/* =========================================================
+   FINAL MESSAGE
+========================================================= */
+
+.final-message {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        7px;
+
+    margin-top:
+        8px;
+
+    color:
+        #765563;
+
+    font-size:
+        11px;
+
+}
+
+
+.final-message strong {
+
+    color:
+        #e84f8d;
+
+}
+
+
+/* =========================================================
+   FLOATING STARS
+========================================================= */
+
+.party-stars span {
+
+    position:
+        absolute;
+
+    color:
+        rgba(255,255,255,.8);
+
+    font-size:
+        18px;
+
+    pointer-events:
+        none;
+
+    animation:
+        starFloat
+        3s
+        ease-in-out
+        infinite;
+
+}
+
+
+.party-stars span:nth-child(1) {
+
+    top:
+        9%;
+
+    left:
+        10%;
+
+}
+
+
+.party-stars span:nth-child(2) {
+
+    top:
+        18%;
+
+    right:
+        12%;
+
+    animation-delay:
+        .6s;
+
+}
+
+
+.party-stars span:nth-child(3) {
+
+    top:
+        48%;
+
+    left:
+        5%;
+
+    animation-delay:
+        1s;
+
+}
+
+
+.party-stars span:nth-child(4) {
+
+    top:
+        42%;
+
+    right:
+        6%;
+
+    animation-delay:
+        1.5s;
+
+}
+
+
+.party-stars span:nth-child(5) {
+
+    bottom:
+        17%;
+
+    left:
+        14%;
+
+    animation-delay:
+        .8s;
+
+}
+
+
+.party-stars span:nth-child(6) {
+
+    bottom:
+        20%;
+
+    right:
+        14%;
+
+    animation-delay:
+        1.2s;
+
+}
+
+
+@keyframes starFloat {
+
+    0%,
+    100% {
+
+        opacity:
+            .35;
+
+        transform:
+            scale(.7)
+            rotate(0);
+
+    }
+
+    50% {
+
+        opacity:
+            1;
+
+        transform:
+            scale(1.2)
+            rotate(15deg);
+
+    }
+
+}
+
+
+/* =========================================================
+   BALLOONS
+========================================================= */
+
+.party-balloons {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    pointer-events:
+        none;
+
+    z-index:
+        2;
+
+}
+
+
+.party-balloon {
+
+    position:
+        absolute;
+
+    width:
+        35px;
+
+    height:
+        46px;
+
+    border-radius:
+        50%
+        50%
+        45%
+        45%;
+
+    opacity:
+        .72;
+
+    animation:
+        partyBalloonFloat
+        5s
+        ease-in-out
+        infinite;
+
+}
+
+
+.party-balloon::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    bottom:
+        -5px;
+
+    transform:
+        translateX(-50%);
+
+    border-left:
+        4px solid transparent;
+
+    border-right:
+        4px solid transparent;
+
+    border-top:
+        7px solid currentColor;
+
+}
+
+
+.party-balloon::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        100%;
+
+    left:
+        50%;
+
+    width:
+        1px;
+
+    height:
+        80px;
+
+    background:
+        rgba(70,50,60,.25);
+
+}
+
+
+.party-balloon-pink {
+
+    left:
+        3%;
+
+    bottom:
+        12%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffb4d2,
+            #ef6199
+        );
+
+    color:
+        #ef6199;
+
+}
+
+
+.party-balloon-blue {
+
+    left:
+        12%;
+
+    top:
+        16%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #afeaf7,
+            #59afd0
+        );
+
+    color:
+        #59afd0;
+
+    animation-delay:
+        1s;
+
+}
+
+
+.party-balloon-purple {
+
+    right:
+        5%;
+
+    top:
+        23%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d7bcf7,
+            #9b78dc
+        );
+
+    color:
+        #9b78dc;
+
+    animation-delay:
+        1.8s;
+
+}
+
+
+.party-balloon-yellow {
+
+    right:
+        4%;
+
+    bottom:
+        10%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffeca5,
+            #efbd42
+        );
+
+    color:
+        #efbd42;
+
+    animation-delay:
+        .5s;
+
+}
+
+
+@keyframes partyBalloonFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0)
+            rotate(-4deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-14px)
+            rotate(5deg);
+
+    }
+
+}
+
+
+/* =========================================================
+   LEAVE BUTTON
+========================================================= */
+
+.leave-button {
+
+    position:
+        fixed;
+
+    left:
+        50%;
+
+    bottom:
+        22px;
+
+    transform:
+        translateX(-50%);
+
+    z-index:
+        100;
+
+    min-width:
+        125px;
+
+    height:
+        47px;
+
+    padding:
+        0 22px;
+
+    border:
+        none;
+
+    border-radius:
+        15px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        8px;
+
+    color:
+        #ffffff;
+
+    background:
+        linear-gradient(
+            180deg,
+            #bcaeb3,
+            #85757c
+        );
+
+    box-shadow:
+
+        0 6px 0
+        #63565c,
+
+        0 10px 20px
+        rgba(70,50,60,.25),
+
+        inset 0 2px 0
+        rgba(255,255,255,.5);
+
+    font-size:
+        14px;
+
+    font-weight:
+        850;
+
+    cursor:
+        pointer;
+
+    user-select:
+        none;
+
+    touch-action:
+        manipulation;
+
+    transition:
+        left .25s ease,
+        top .25s ease,
+        transform .25s ease;
+
+}
+
+
+.leave-button:hover {
+
+    box-shadow:
+
+        0 7px 0
+        #63565c,
+
+        0 13px 22px
+        rgba(70,50,60,.3),
+
+        inset 0 2px 0
+        rgba(255,255,255,.55);
+
+}
+
+
+.leave-icon {
+
+    font-size:
+        17px;
+
+}
+
+
+/* =========================================================
+   BOTTOM HINT
+========================================================= */
+
+.bottom-hint {
+
+    position:
+        fixed;
+
+    left:
+        50%;
+
+    bottom:
+        3px;
+
+    transform:
+        translateX(-50%);
+
+    z-index:
+        90;
+
+    color:
+        rgba(73,52,62,.45);
+
+    font-size:
+        9px;
+
+    font-weight:
+        700;
+
+    pointer-events:
+        none;
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .party-content {
+
+        width:
+            92%;
+
+        max-height:
+            94vh;
+
+    }
+
+
+    .party-header {
+
+        margin-bottom:
+            10px;
+
+    }
+
+
+    .party-mini {
+
+        font-size:
+            9px;
+
+        letter-spacing:
+            3px;
+
+    }
+
+
+    .party-header h1 {
+
+        font-size:
+            29px;
+
+    }
+
+
+    .party-subtitle {
+
+        font-size:
+            11px;
+
+        margin-top:
+            6px;
+
+    }
+
+
+    .qr-card {
+
+        width:
+            285px;
+
+        padding:
+            12px 12px 14px;
+
+        border-radius:
+            21px;
+
+    }
+
+
+    .qr-wrapper {
+
+        width:
+            175px;
+
+        height:
+            175px;
+
+    }
+
+
+    .qr-title {
+
+        font-size:
+            14px;
+
+    }
+
+
+    .qr-small {
+
+        font-size:
+            9px;
+
+    }
+
+
+    .qr-instruction {
+
+        font-size:
+            10px;
+
+        margin-top:
+            7px;
+
+    }
+
+
+    .qr-thanks {
+
+        font-size:
+            10px;
+
+    }
+
+
+    .party-quote {
+
+        margin-top:
+            8px;
+
+        padding:
+            6px 13px;
+
+    }
+
+
+    .party-quote p {
+
+        font-size:
+            11px;
+
+    }
+
+
+    .quote-author {
+
+        font-size:
+            9px;
+
+    }
+
+
+    .final-message {
+
+        font-size:
+            10px;
+
+        margin-top:
+            5px;
+
+    }
+
+
+    .party-balloon {
+
+        width:
+            27px;
+
+        height:
+            37px;
+
+    }
+
+
+    .leave-button {
+
+        min-width:
+            112px;
+
+        height:
+            43px;
+
+        bottom:
+            18px;
+
+        font-size:
+            13px;
+
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .party-header h1 {
+
+        font-size:
+            26px;
+
+    }
+
+
+    .party-subtitle {
+
+        font-size:
+            10px;
+
+    }
+
+
+    .qr-card {
+
+        width:
+            260px;
+
+        padding:
+            10px;
+
+    }
+
+
+    .qr-wrapper {
+
+        width:
+            155px;
+
+        height:
+            155px;
+
+    }
+
+
+    .qr-card-top {
+
+        margin-bottom:
+            7px;
+
+    }
+
+
+    .qr-icon {
+
+        width:
+            31px;
+
+        height:
+            31px;
+
+    }
+
+
+    .qr-title {
+
+        font-size:
+            12px;
+
+    }
+
+
+    .qr-small {
+
+        font-size:
+            8px;
+
+    }
+
+
+    .party-quote p {
+
+        font-size:
+            10px;
+
+    }
+
+
+    .final-message {
+
+        font-size:
+            9px;
+
+    }
+
+}
